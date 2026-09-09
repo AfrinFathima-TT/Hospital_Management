@@ -1,0 +1,45 @@
+------ Hospital Patient Management CRUD Application ------
+
+Database    : hospital_db
+Table       : patient
+
+        id              int PK, auto increment
+        name            varchar(100)
+        age             int
+        gender          varchar(20)
+        mobile          varchar(15) unique
+        disease         varchar(100)
+        doctor          varchar(100)
+        admission_date  date
+
+------> Requirements
+
+Create a class named PatientManager
+
+1. Connect to Database
+Establish a connection to the MySQL database hospital_db.
+
+2. Add Record
+Accept all patient field values.
+Insert the patient record into the patient table.
+Display: "Patient Added Successfully."
+
+3. View All Records
+Fetch and display all patient records from the table.
+
+4. Retrieve Record
+Accept the patient id.
+Find and display the patient record with the given id.
+If the record does not exist, display: "Patient Not Found."
+
+5. Update Record
+Accept the patient id.
+Update the required patient details.
+Display: "Patient Updated Successfully."
+
+6. Delete Record
+Accept the patient id.
+Delete the corresponding patient record.
+Display: "Patient Deleted Successfully."
+
+Note: Implement all database operations as methods inside the PatientManager class.
