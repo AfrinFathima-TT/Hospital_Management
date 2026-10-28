@@ -31,8 +31,9 @@ class PatientManager(dbconnect):
                 query = "Select * from patient"
                 self.cursor.execute(query)
                 records = self.cursor.fetchall()
-                for data in records:
-                    print(data)
+                return records
+                # for data in records:
+                #     print(data)
             except Exception as e:
                 print(e)
         def post(self,**kwargs):
@@ -93,14 +94,14 @@ class PatientManager(dbconnect):
 
 
 
-connection_instance = dbconnect()
-print(connection_instance.get_connected())
-patient_instance =PatientManager()
-patient_instance.get()
-# patient_instance.post(Name = "Arun",Age =28,Gender = "Male",Mobile =9890876213,Disease= "Stomachache",Doctor = "Remya",Admission_date =datetime.datetime.today())
-print("_ _ _ _ Details of one patient _ _ _ _")
-patient_instance.retrieve(2)
-print("_ _ _ _ Updation _ _ _ _")
-patient_instance.put(3,Doctor = "Akhila")
-print("_ _ _ _ Deletion _ _ _ _")
-patient_instance.delete(4)
+# connection_instance = dbconnect()
+# print(connection_instance.get_connected())
+# patient_instance =PatientManager()
+# patient_instance.get()
+# # patient_instance.post(Name = "Arun",Age =28,Gender = "Male",Mobile =9890876213,Disease= "Stomachache",Doctor = "Remya",Admission_date =datetime.datetime.today())
+# print("_ _ _ _ Details of one patient _ _ _ _")
+# patient_instance.retrieve(2)
+# print("_ _ _ _ Updation _ _ _ _")
+# patient_instance.put(3,Doctor = "Akhila")
+# print("_ _ _ _ Deletion _ _ _ _")
+# patient_instance.delete(4)
